@@ -1,0 +1,17 @@
+.Navbar {
+  display: flex;
+  height: 86px;
+  padding: 0px 60px;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--Neutral-1, #fff);
+
+  /* drop-shadow/0.15 */
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+}
+
+.razeImgContainer {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
