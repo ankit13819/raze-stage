@@ -37,42 +37,7 @@ export default async function Home({ params }) {
           </div>
           <img src={profile[0]?.avatar?.url} className={styles.avatar} />
 
-          {/*offineeds section */}
-          <div className={styles.offineedMain}>
-            <div className={styles.offineedsContainer}>
-              {" "}
-              <div className={styles.textOffineed}>
-                <h5>Offineeds</h5>
-                <a href={profile[0]?.website} target="_blank">
-                  <p>Offineeds.com</p>
-                </a>
-                <div className={styles.hidden}>
-                  <img src="/HiddenCom.png" />
-                  <img src="/Hidden.png" style={{ marginLeft: "5px" }} />
-                </div>
-                <div className={styles.cityTime}>
-                  <p>Bangaluru</p>
-                  <span className={styles.middleDot}>&#x1F784;</span>
-                  <p>10AM - 7PM</p>
-                </div>
-                <div className={styles.socialMain}>
-                  {profile?.map((item) =>
-                    item?.social?.map((socialItem) => (
-                      <a
-                        key={socialItem._id}
-                        href={socialItem?.url}
-                        target="_blank">
-                        <img
-                          src={socialMediaIcons[socialItem.name]}
-                          alt={socialItem?.name}
-                          style={{ width: "28px", height: "28px" }}
-                        />
-                      </a>
-                    ))
-                  )}
-                </div>
-              </div>
-            </div>
+          <div>
             <div className={styles.laungage}>
               <p>English</p>
               <img
@@ -80,12 +45,50 @@ export default async function Home({ params }) {
                 style={{ height: "14px", width: "14px" }}
               />
             </div>
-            <div className={styles.messageContainer}>
-              <div className={styles.messageBox}>
-                <button className={styles.messageBtn}>Message</button>
+            {/*offineeds section */}
+            <div className={styles.offineedMain}>
+              <div className={styles.offineedsContainer}>
+                {" "}
+                <div className={styles.textOffineed}>
+                  <h5>Offineeds</h5>
+                  <a href={profile[0]?.website} target="_blank">
+                    <p>Offineeds.com</p>
+                  </a>
+                  <div className={styles.hidden}>
+                    <img src="/HiddenCom.png" />
+                    <img src="/Hidden.png" style={{ marginLeft: "5px" }} />
+                  </div>
+                  <div className={styles.cityTime}>
+                    <p>Bangaluru</p>
+                    <span className={styles.middleDot}>&#x1F784;</span>
+                    <p>10AM - 7PM</p>
+                  </div>
+                  <div className={styles.socialMain}>
+                    {profile?.map((item) =>
+                      item?.social?.map((socialItem) => (
+                        <a
+                          key={socialItem._id}
+                          href={socialItem?.url}
+                          target="_blank">
+                          <img
+                            src={socialMediaIcons[socialItem.name]}
+                            alt={socialItem?.name}
+                            style={{ width: "28px", height: "28px" }}
+                          />
+                        </a>
+                      ))
+                    )}
+                  </div>
+                </div>
               </div>
-              <div className={styles.messageLogo}>
-                <img src="/msgLogo.svg" />
+
+              <div className={styles.messageContainer}>
+                <div className={styles.messageBox}>
+                  <button className={styles.messageBtn}>Message</button>
+                </div>
+                <div className={styles.messageLogo}>
+                  <img src="/msgLogo.svg" />
+                </div>
               </div>
             </div>
           </div>
@@ -301,6 +304,55 @@ export default async function Home({ params }) {
           <div className={styles.offeringMain}>
             <div className={styles.AboutTextContainer}>
               <p> Achievements</p>
+            </div>
+          </div>
+
+          {/* Affiliations and certifications */}
+          <div className={styles.certificationMain}>
+            <div className={styles.wtoExcellenceMain}>
+              {profile?.map((item) =>
+                item?.achievements?.map((certificate) => (
+                  <div className={styles.wtoBoxContainer}>
+                    <img
+                      src={certificate?.url}
+                      style={{
+                        width: "46px",
+                        height: "46px",
+                        background: "lightgray 50% / cover no-repeat ",
+                      }}
+                    />
+                    <div className={styles.wtoTextBox}>
+                      <h5>{certificate?.title}</h5>
+                      <div className={styles.worldText}>
+                        <p>
+                          {certificate?.organisation}{" "}
+                          <span className={styles.middleDot}>&#x1F784; </span>
+                          {certificate?.date}
+                        </p>
+                      </div>
+                      <div style={{ width: "830px" }}>
+                        {" "}
+                        <p className={styles.achiveDesc}>
+                          {certificate?.description}
+                        </p>
+                      </div>
+
+                      <div className={styles.wtoImgContainer}>
+                        {certificate?.media?.map((data) => (
+                          <img src={data?.url} />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+        <div className={styles.secondPage}>
+          <div className={styles.offeringMain}>
+            <div className={styles.AboutTextContainer}>
+              <p> In The News</p>
             </div>
           </div>
 
