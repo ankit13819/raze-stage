@@ -190,7 +190,7 @@ export default function Home({ params }) {
                   <Swiper spaceBetween={15} slidesPerView={"auto"}>
                     {profile?.map((decks) =>
                       decks?.decks?.map((deck) => (
-                        <SwiperSlide key={deck?._id} style={{ width: "46%" }}>
+                        <SwiperSlide key={deck?._id}>
                           <div className="swiper-slide-content">
                             <div className="page_decksImageContainerBox__e_iN1">
                               <img src={deck?.url} alt={deck?.title} />
