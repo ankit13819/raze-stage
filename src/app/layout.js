@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Roboto } from "next/font/google";
 import Navbar from "@/components/Navbar/Navbar";
-
 const roboto = Roboto({
   weight: ["400", "500", "700"],
   style: ["normal", "italic"],
@@ -53,16 +52,19 @@ export default function RootLayout({ children }) {
       "Raze Admins",
     ],
   };
+
   return (
     <html lang="en">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
         />
       </head>
       <body className={roboto.className}>
         <Navbar />
+
         {children}
       </body>
     </html>

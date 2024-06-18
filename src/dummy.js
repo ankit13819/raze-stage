@@ -128,11 +128,40 @@ export const profile = [
     ],
     news: [
       {
-        title: "News 1",
-        description: "Description 1",
-        url: "http://example.com/news1",
-        date: "2022-01-01T00:00:00.000Z",
-        media: [],
+        title: "Corporate Gift Ideas for Employees In 2022 And Beyond",
+        organisation: "abcnews.com",
+        description:
+          "This article is about lorem ipsum dolor sit amet. Lorem Ipsum Dolor sit amet lorem ipsum dolor sit amet. Lorem Ipsum Dolor sit amet lorem ipsum dolor sit amet.",
+        author: "Xyz Author",
+        logourl: "https://dg53pzd6emty4.cloudfront.net/discover/newsThree.png",
+        url: "articleabcnews.com",
+
+        date: "20,July",
+        media: [
+          {
+            url: "https://dg53pzd6emty4.cloudfront.net/discover/newsTwo.png",
+          },
+          {
+            url: "https://dg53pzd6emty4.cloudfront.net/discover/newsOne.png",
+          },
+        ],
+        _id: "666061e09cbcf733822aa04d",
+      },
+      {
+        title: "Lorem Ipsum news arcticle 2023",
+        organisation: "abcnews.com",
+        description:
+          "This article is about lorem ipsum dolor sit amet. Lorem Ipsum Dolor sit amet lorem ipsum dolor sit amet. Lorem Ipsum Dolor sit amet lorem ipsum dolor sit amet.",
+        author: "Xyz Author",
+        logourl: "https://dg53pzd6emty4.cloudfront.net/discover/newsThree.png",
+        url: "loremipsumnewsjsfsdfchbsd.com",
+
+        date: "20,July",
+        media: [
+          {
+            url: "https://dg53pzd6emty4.cloudfront.net/discover/newsTwo.png",
+          },
+        ],
         _id: "666061e09cbcf733822aa04d",
       },
     ],
@@ -253,7 +282,30 @@ export const profile = [
         bgColor: "#EEDCFF",
       },
     ],
-    gallery: [],
+    gallery: [
+      {
+        media: [
+          {
+            url: "https://dg53pzd6emty4.cloudfront.net/discover/galleryOne.png",
+          },
+          {
+            url: "https://dg53pzd6emty4.cloudfront.net/discover/galleryTwo.png",
+          },
+          {
+            url: "https://dg53pzd6emty4.cloudfront.net/discover/galleryThree.png",
+          },
+          {
+            url: "https://dg53pzd6emty4.cloudfront.net/discover/galleryFour.png",
+          },
+          {
+            url: "https://dg53pzd6emty4.cloudfront.net/discover/galleryFive.png",
+          },
+          {
+            url: "https://dg53pzd6emty4.cloudfront.net/discover/galleryOne.png",
+          },
+        ],
+      },
+    ],
     decks: [
       {
         title: "Corporate Gift Ideas for Diwali 2022",
@@ -273,7 +325,13 @@ export const profile = [
         _id: "666061e09cbcf733822aa052",
       },
     ],
-    teams: [],
+    teams: [
+      {
+        avatarUrl: "",
+        team: "",
+        linkedUrl: "",
+      },
+    ],
     testimonials: [],
     status: "active",
     verified: true,
